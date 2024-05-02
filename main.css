@@ -1,0 +1,438 @@
+body {
+  width: 100vh;
+  height: 100vh;
+  margin: auto;
+
+  background-color: rgba(128, 128, 128, 0.111);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.box {
+  height: 10px;
+  margin-bottom: 200px;
+}
+
+.ex3 {
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  margin-top: 100px;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  width: 500px;
+  padding: 20px;
+
+  background-color: white;
+
+  overflow: hidden;
+}
+
+.collapse_close {
+  animation-name: closure;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.collapse_open {
+  animation-name: disclosure;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.collapse_btn {
+  width: 80px;
+  padding: 8px;
+
+  background-color: rgb(46, 157, 242);
+  color: rgb(241, 241, 241);
+
+  font-size: 14px;
+
+  border: 0;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.collapse_btn:hover {
+  background-color: rgb(38, 146, 229);
+}
+
+.collapse-clicked {
+  outline: 3px solid rgb(142, 206, 255);
+}
+
+.collapse_text {
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+
+  padding: 10px;
+}
+
+@keyframes closure {
+  from {
+    height: 160px;
+  }
+
+  to {
+    height: 32px;
+  }
+}
+
+@keyframes disclosure {
+  from {
+    height: 32px;
+  }
+
+  to {
+    height: 160px;
+  }
+}
+
+
+
+
+.callbackChat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
+
+  width: 500px;
+  padding: 20px;
+
+  position: relative;
+}
+
+.callbackChat_popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  background-color: white;
+  width: 50%;
+  padding: 20px;
+
+  position: absolute;
+
+  animation-name: open;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.callbackChat_popup-folding {
+  animation-name: folding;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.callbackChat_popup-header {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.callbackChat_popup-title {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: default;
+}
+
+.callbackChat_popup-close {
+  width: 12px;
+  height: 10px;
+  background-image: url(7fb94a48fdb2cce7362a.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.callbackChat_popup-textarea {
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 5px;
+}
+
+.callbackChat_popup-btn {
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 5px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.redIcon {
+  width: 50px;
+  height: 50px;
+
+  background-color: red;
+
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  top: 266px;
+  right: 90px;
+
+  transition: width 0.3s linear, height 0.3s linear, top 0.3s linear, right 0.3s linear;
+}
+
+.redIcon_folding {
+  animation-name: folding;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.redIcon_open {
+  animation-name: open;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.redIcon:hover {
+  width: 60px;
+  height: 60px;
+
+  top: 261px;
+  right: 85px;
+}
+
+@keyframes open {
+  from {
+    transform: scale(0.7, 0.7);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes folding {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0.7, 0.7);
+  }
+}
+
+
+.liker {
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+.liker_btn {
+  width: 85px;
+  padding: 8px;
+
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 15px;
+
+  background-color: rgb(255, 0, 0);
+  color: white;
+
+  cursor: pointer;
+}
+
+.like {
+  width: 22px;
+  height: 22px;
+
+  background-image: url(be0d860e775accf30d67.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.like_flying1 {
+  animation-name: flying1;
+}
+
+.like_flying2 {
+  animation-name: flying2;
+}
+
+.like_flying3 {
+  animation-name: flying3;
+}
+
+.like_flying4 {
+  animation-name: flying4;
+}
+
+
+@keyframes flying1 {
+  from {
+    left: 85px;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  25% {
+    left: 72px;
+    bottom: 50px;
+    opacity: 0.8;
+  }
+
+  50% {
+    left: 85px;
+    bottom: 100px;
+    opacity: 0.6;
+  } 
+
+  75% {
+    left: 95px;
+    bottom: 150px;
+    opacity: 0.4;
+  }
+  
+  to {
+    left: 85px;
+    bottom: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes flying2 {
+  from {
+    left: 85px;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  25% {
+    left: 85px;
+    bottom: 50px;
+    opacity: 0.8;
+  }
+
+  50% {
+    left: 112px;
+    bottom: 100px;
+    opacity: 0.6;
+  } 
+
+  75% {
+    left: 62px;
+    bottom: 150px;
+    opacity: 0.4;
+  }
+  
+  to {
+    left: 85px;
+    bottom: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes flying3 {
+  from {
+    left: 85px;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  25% {
+    left: 85px;
+    bottom: 50px;
+    opacity: 0.8;
+  }
+
+  50% {
+    left: 54px;
+    bottom: 100px;
+    opacity: 0.6;
+  } 
+
+  75% {
+    left: 98px;
+    bottom: 150px;
+    opacity: 0.4;
+  }
+  
+  to {
+    left: 85px;
+    bottom: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes flying4 {
+  from {
+    left: 85px;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  25% {
+    left: 117px;
+    bottom: 50px;
+    opacity: 0.9;
+  }
+
+  50% {
+    left: 85px;
+    bottom: 100px;
+    opacity: 0.8;
+  } 
+
+  75% {
+    left: 74px;
+    bottom: 150px;
+    opacity: 0.5;
+  }
+  
+  to {
+    left: 85px;
+    bottom: 200px;
+    opacity: 0;
+  }
+}
+
+
+
+/*# sourceMappingURL=main.css.map*/
