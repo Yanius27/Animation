@@ -8,8 +8,7 @@ export default function app() {
   const likerWidget = new Liker();
 
   const container = document.querySelector('.container');
-  console.log(container.childNodes);
-  container.childNodes[1].append(collapseWidget.element);
-  container.childNodes[3].append(callbackChatWidget.element);
-  container.childNodes[5].append(likerWidget.element);
+  container.childNodes[0].append(collapseWidget.element);
+  container.childNodes[1].append(callbackChatWidget.element);
+  container.childNodes[2].append(likerWidget.element);
 }
